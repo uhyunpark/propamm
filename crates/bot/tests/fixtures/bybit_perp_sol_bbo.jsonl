@@ -1,0 +1,3 @@
+{"recv_ns":1791125026600238000,"feed":"bybit_perp_sol_bbo","msg":{"topic":"orderbook.1.SOLUSDT","ts":1791125026589,"type":"snapshot","data":{"s":"SOLUSDT","b":[["121.41","446.2"]],"a":[["121.42","598.8"]],"u":79772503,"seq":283413319942},"cts":1791125026586}}
+{"recv_ns":1791125026600246000,"feed":"bybit_perp_sol_bbo","msg":{"success":true,"ret_msg":"","conn_id":"da7tn4froksdi2ps85jg-c04zi","req_id":"","op":"subscribe"}}
+{"recv_ns":1791125026640716000,"feed":"bybit_perp_sol_bbo","msg":{"topic":"orderbook.1.SOLUSDT","ts":1791125026619,"type":"snapshot","data":{"s":"SOLUSDT","b":[["121.41","516.2"]],"a":[["121.42","588.1"]],"u":79772504,"seq":283413319968},"cts":1791125026617}}

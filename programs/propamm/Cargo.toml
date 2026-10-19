@@ -1,0 +1,35 @@
+[package]
+name = "propamm"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "PropAMM on-chain program (Anchor)"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "propamm"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+custom-heap = []
+custom-panic = []
+anchor-debug = []
+# CU ladder: raw 1-byte-tag `update_price` through the Anchor fallback. Off by default.
+fast-update = []
+
+[dependencies]
+anchor-lang = "=1.2.0"
+# token_2022 is only compiled in because the `token::` constraint macros reference anchor_spl::token_interface; we use SPL Token only.
+anchor-spl = { version = "=1.2.0", default-features = false, features = ["token", "token_2022"] }
+# Needed by the `#[account(zero_copy)]` derive.
+bytemuck = { version = "1.25.2", features = ["derive", "min_const_generics"] }
+propamm-pricing = { path = "../../crates/pricing" }

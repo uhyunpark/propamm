@@ -1,0 +1,29 @@
+# cargo-deny 0.20 config. Run with `make deny`.
+
+[advisories]
+unmaintained = "workspace"
+yanked = "warn"
+
+[licenses]
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause", # arrayref (Solana stack)
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Zlib",
+    "CDLA-Permissive-2.0",
+]
+
+[bans]
+multiple-versions = "warn"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+# Jupiter AMM interface is consumed from git (pinned rev) because the published
+# 0.6.1 breaks on a fresh resolve; see docs/toolchain.md.
+allow-git = ["https://github.com/jup-ag/jupiter-amm-interface"]

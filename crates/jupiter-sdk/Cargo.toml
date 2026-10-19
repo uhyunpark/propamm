@@ -1,0 +1,29 @@
+[package]
+name = "propamm-jupiter"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Jupiter Amm trait adapter for PropAMM"
+
+[lints]
+workspace = true
+
+[dependencies]
+# Git HEAD pin: its solana-account 4 unifies with litesvm 0.17 (the published 0.6.1 uses solana-account 3).
+jupiter-amm-interface = { git = "https://github.com/jup-ag/jupiter-amm-interface", rev = "95bd18485e580625a39eb92a0c0ad2061579daad" }
+propamm-client = { path = "../client" }
+propamm-pricing = { path = "../pricing" }
+solana-account = "4"
+solana-pubkey = "4.0.0"
+
+[dev-dependencies]
+anchor-lang = "=1.2.0"
+litesvm = "0.17.0"
+litesvm-token = "0.17.0"
+propamm = { path = "../../programs/propamm", features = ["cpi"] }
+sha2 = "0.10.9"
+solana-keypair = "3.1.2"
+solana-message = "4.6.0"
+solana-signer = "3.0.1"
+solana-transaction = "4.3.0"

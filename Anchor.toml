@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "1.2.0"
+solana_version = "4.1.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+propamm = "2PuFKsYDoYaVWFnSxVGgbD2Xvsz3nymLu2WuctvF6V3F"
+propamm_pinocchio = "HTsHg7iAkb5YtrV9in5537j8iijh1VHrk1t2dFMpB287"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+# Tests are Rust (LiteSVM) in crates/propamm-tests; run `make test`.
+test = "cargo test -p propamm-tests"

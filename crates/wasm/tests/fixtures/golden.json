@@ -1,0 +1,4 @@
+{
+  "buy": { "amountIn": "1000000000", "amountOut": "4997001798", "consumedAfter": "16997001798" },
+  "sell": { "amountIn": "25000000000", "amountOut": "4996980000", "consumedAfter": "28000000000" }
+}

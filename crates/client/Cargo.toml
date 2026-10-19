@@ -1,0 +1,21 @@
+[package]
+name = "propamm-client"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Shared client helpers for PropAMM: PDAs, instruction builders, account decoding"
+
+[lints]
+workspace = true
+
+[dependencies]
+bytemuck = "1.25.2"
+propamm-pricing = { path = "../pricing" }
+solana-instruction = "3.1.0"
+solana-pubkey = { version = "4.0.0", features = ["curve25519"] }
+
+[dev-dependencies]
+anchor-lang = "=1.2.0"
+propamm = { path = "../../programs/propamm", features = ["cpi"] }
+sha2 = "0.10.9"

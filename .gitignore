@@ -1,0 +1,10 @@
+/target
+**/node_modules
+.anchor
+test-ledger
+/data
+.DS_Store
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+mutants.out*
+web/src/wasm/
